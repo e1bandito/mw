@@ -1,0 +1,23 @@
+.btn {
+  @include clear-button;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+  line-height: 1;
+  padding: 16px 65px;
+  background-color: $accent;
+  border-radius: 4px;
+  transition: box-shadow 0.3s linear;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    box-shadow: 0 0 10px 2px $accent;
+  }
+
+  @include min($md) {
+    width: auto;
+  }
+}

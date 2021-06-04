@@ -1,0 +1,5 @@
+mixin btn(value, type, classes)
+  button.btn(class= classes type= type)&attributes(attributes) #{value}
+
+mixin lnk(value, path, classes)
+  a.btn(href= path class= classes)&attributes(attributes) #{value}

@@ -1,0 +1,82 @@
+.hero {
+  &__container {
+    background-image: url('../img/hero.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 200px;
+    padding-bottom: 280px;
+    padding-top: 20px;
+  }
+
+  &__info-col {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    color: $white;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $white;
+  }
+
+  @include min($sm) {
+    &__container {
+      padding-top: 60px;
+    }
+  }
+
+  @include min($md) {
+    &__container {
+      display: flex;
+      align-items: center;
+      padding-bottom: 100px;
+      background-position: right 15px center;
+      background-size: 50% 300px;
+    }
+
+    &__info-col {
+      width: 50%;
+      margin: 0;
+    }
+  }
+
+  @include min($lg) {
+    &__container {
+      padding-top: 100px;
+      padding-bottom: 180px;
+    }
+
+    &__info-col {
+      max-width: 527px;
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 60px;
+    }
+  }
+
+  @include min($xl) {
+    &__container {
+      background-size: 689px 442px;
+      background-position: right top 60px;
+    }
+  }
+}
