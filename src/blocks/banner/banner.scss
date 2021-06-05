@@ -1,0 +1,70 @@
+.banner {
+  &__inner {
+    background-image: url('../img/banner.png'),
+      linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom, center center;
+    background-size: auto 150px, 100%;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 180px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url('../img/banner@2x.png'),
+        linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    color: $white;
+    font-size: 20px;
+  }
+
+  @include min($sm) {
+    &__inner {
+      padding-bottom: 100px;
+    }
+
+    &__btn {
+      width: auto;
+    }
+
+    &__title {
+      max-width: 450px;
+    }
+  }
+
+  @include min($md) {
+    &__inner {
+      padding: 40px;
+      background-size: auto 180px, 100%;
+    }
+
+    &__title {
+      font-size: 24px;
+      max-width: 558px;
+    }
+  }
+
+  @include min($lg) {
+    &__inner {
+      padding: 70px;
+      background-position: right center, center center;
+      background-size: auto 250px, 100%;
+    }
+
+    &__title {
+      font-size: 34px;
+      line-height: 45px;
+      margin-bottom: 46px;
+    }
+  }
+
+  @include min($xl) {
+    &__inner {
+      background-size: 732px 340px, 100%;
+    }
+  }
+}
