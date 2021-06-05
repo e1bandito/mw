@@ -70,6 +70,7 @@
 
   &__form-btn {
     margin-top: 34px;
+    cursor: pointer;
   }
 
   @include min(500) {
