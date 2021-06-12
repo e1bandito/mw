@@ -96,7 +96,9 @@
 
       let contentString = `
       <div class="map__baloon">
-        <img class="map__baloon-img" src="${n.img}" alt="${n.title}">
+        <div class="map__baloon-img-wrapper">
+          <img class="map__baloon-img" src="${n.img}" alt="${n.title}" width="250">
+        </div>
         <p class="map__baloon-text">${n.title}</p>
       </div>`
 
@@ -115,5 +117,10 @@
   }
 
   google.maps.event.addDomListener(window, 'load', init);
+
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
 
   })();
